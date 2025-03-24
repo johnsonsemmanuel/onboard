@@ -24,7 +24,7 @@ $summaries_size = $cdatax['sumacres'];
 <h6>Manage your registered growers for today</h6>
 </div>
 <div class="page-btn">
-<a href="index.php?page=newgroweronboard" class="btn btn-added"><img src="../assets/img/icons/plus.svg" alt="img" class="me-1">Add Grower</a>
+<a href="index.php?page=newgroweronboard" id="aduanefie" class="btn btn-added"><img src="../assets/img/icons/plus.svg" alt="img" class="me-1">Add Grower</a>
 </div>
 </div>
 <div class="row">

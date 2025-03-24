@@ -21,6 +21,9 @@ $delete=$_SESSION['delete'];
 <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style type="text/css">
+	#aduanefie {
+background: #8c9c6c;
+}
 .brad{
 border-radius: 10px;
 }

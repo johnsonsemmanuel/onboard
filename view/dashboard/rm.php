@@ -30,7 +30,7 @@
 <span><img src="../assets/img/icons/dash2.svg" alt="img"></span>
 </div>
 <div class="dash-widgetcontent">
-<h5><span class="counters" data-count="4385.00">4,385.00</span></h5>
+<h5>GH¢<span class="counters" data-count="4385.00">GH¢ 402</span></h5>
 <h6>Total RM Payments</h6>
 </div>
 </div>

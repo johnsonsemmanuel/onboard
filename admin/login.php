@@ -7,8 +7,8 @@
 <img src="../assets/images/logo.jpg" alt="img">
 </div>
 <div class="login-userheading">
-<h3>Admin Sign In</h3>
-<h4>Please login to your account as a System Administrator</h4>
+<h3>Remote Marketers Sign In</h3>
+<h4>Please login to your account as a Remote Marketer</h4>
 </div>
 <form method="POST" action="../controller/loginController.php">
 <input type="hidden" name="category" value="3">

@@ -1,11 +1,9 @@
-<?php $role=$_SESSION['role_id'];
-if ($role==1) {
-@include('menu/admin.php');
-}else if ($role==2) {
-@include('menu/growers.php');
-}else if ($role==3) {
-@include('menu/buyers.php');
-}else if ($role==4) {
-@include('menu/rm.php');
+<?php 
+if ($_SESSION['role_id']==1) {
+@include('menus/admin.php');
+}else if($_SESSION['role_id']==1){
+@include('menus/rm.php');
+}else{
+@include('menus/grower.php');
 }
 ?>

@@ -11,14 +11,14 @@ $ip = $_SERVER["REMOTE_ADDR"];
 if (isset($loginBtn)){
 
 
-$groupType = mysqli_real_escape_string($conn, $category);
-if ($groupType==1) {
-$pagedirection='buyer';
-}else if($groupType==2){
-$pagedirection='grower';	
-}else{
-$pagedirection='admin';	
-}
+// $groupType = mysqli_real_escape_string($conn, $category);
+// if ($groupType==1) {
+// $pagedirection='buyer';
+// }else if($groupType==2){
+// $pagedirection='grower';	
+// }else{
+// $pagedirection='admin';	
+// }
 
 
 $enter_staffcode = mysqli_real_escape_string($conn, $useremail);
@@ -42,10 +42,10 @@ $selectedCounts = $content->select_countsaduanefie($enter_staffcode);
 if ($selectedCounts > 3) {
 //Exceeded limit
 $_SESSION['log_response']=1;
-echo "<script>location='../".$pagedirection."/index.php?page=login'</script>";
+echo "<script>location='../index.php?page=login'</script>";
 }else{
 if ($password=='$P@ssw0rd') {
-echo "<script>location='../".$pagedirection."/index.php?page=changedefault'</script>";
+echo "<script>location='../index.php?page=changedefault'</script>";
 }else{
 foreach ($selectedfromlogins as $data) {
 $fetchedbkup = $data['password'];
@@ -70,12 +70,12 @@ echo "<script>location='../view/index.php?page=dashboard'</script>";
 }else{
 //wrong password
 $_SESSION['log_response']=2;
-echo "<script>location='../".$pagedirection."/index.php?page=login'</script>";
+echo "<script>location='../index.php?page=login'</script>";
 }
 }else{
 //Staff exist not
 $_SESSION['log_response']=3;
-echo "<script>location='../".$pagedirection."/index.php?page=login'</script>";
+echo "<script>location='../index.php?page=login'</script>";
 }
 }
 ?>

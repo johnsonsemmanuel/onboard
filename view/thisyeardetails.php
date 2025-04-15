@@ -1,55 +1,27 @@
-<?php 
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+<?php @include('inc/nav.php'); 
 $xcod = $_GET['idcode'];
-$selected_todaysales = $context->central_thisyearlist($xcod); ?>
-
-<div class="page-wrapper">
-<div class="content">
-<div class="page-header">
-<div class="page-title">
-<h4>Details This Year</h4>
-<h6>Manage Your Registered Grower Details For This Year</h6>
-</div>
-<div class="page-btn">
-<a href="index.php?page=registeredgrowerslist" class="btn btn-added"><img src="../assets/img/icons/plus.svg" alt="img" class="me-1">Return</a>
-</div>
-</div>
-<div class="card">
-<div class="card-body">
-<div class="table-top">
-<div class="search-set">
-<div class="search-path">
-<a class="btn btn-filter" id="filter_search">
-<img src="../assets/img/icons/filter.svg" alt="img">
-<span><img src="../assets/img/icons/closes.svg" alt="img"></span>
+$selected_todaysales = $context->central_thisyearlist($xcod);
+?>
+<div class="container-fluid py-4">
+<div class="row">
+<div class="col-12 mb-2">
+<a href="index.php?page=registeredgrowers" id="aduanefie" class="btn btn-outline-primary btn-sm mb-0 me-3">
+<img src="../assets/images/svg/plus.svg" alt="img" class="me-1">
+Return to list
 </a>
 </div>
-<div class="search-input">
-<a class="btn btn-searchset"><img src="../assets/img/icons/search-white.svg" alt="img"></a>
 </div>
-</div>
-</div>
-<div class="card" id="filter_inputs">
-<div class="card-body pb-0">
 <div class="row">
-<div class="col-12">
-<div class="form-group">
-<input type="text" class="form-control" value="Detail Of Registered Grower" readonly style="border-radius: 0px; border: 1px solid #ff9f43;">
+<div class="card mb-4">
+<div class="card-header pb-0">
+<h6>Registered Growers List</h6>
 </div>
-</div>
-</div>
-</div>
-</div>
-
+<div class="card-body px-0 pt-0 pb-2">
 <div class="table-responsive">
 <table class="table datanew">
 <thead>
 <tr>
-<th>
-<label class="checkboxs">
-<input type="checkbox" id="select-all">
-<span class="checkmarks"></span>
-</label>
-</th>
 <th>Date</th>
 <th>Grower Name</th>
 <th>Farm Location</th>
@@ -62,12 +34,6 @@ $selected_todaysales = $context->central_thisyearlist($xcod); ?>
 if (!empty($selected_todaysales)) {
 foreach ($selected_todaysales as $data) { $id = $data['farmer_id'];?>
 <tr>
-<td>
-<label class="checkboxs">
-<input type="checkbox">
-<span class="checkmarks"></span>
-</label>
-</td>
 <td><?php echo $data['date_time']; ?></td>
 <td><?php echo ucwords(strtolower($context->fetch_farmer($id))); ?></td>
 <td><?php echo ucwords(strtolower($data['location'])); ?></td>
@@ -96,3 +62,6 @@ ACRES <?php echo number_format($total,2); ?></td>
 </div>
 </div>
 </div>
+<?php @include('inc/foot.php'); ?>
+</div>
+</main>

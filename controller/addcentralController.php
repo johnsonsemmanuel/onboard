@@ -84,7 +84,7 @@ $db = 'tbl_thisyearfarmers';
 $lastid = $content->insert($db,$fields);
 if ($lastid>0) {
 $_SESSION['main_response']=3;
-echo "<script>location='../view/index.php?page=registeredgrowerslist'</script>";
+echo "<script>location='../view/index.php?page=registeredgrowers'</script>";
 }
 }
 
